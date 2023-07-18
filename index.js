@@ -1,6 +1,12 @@
-import express from "express";
-import cors from "cors";
-import mongoose from "mongoose";
+const express = require("express");
+// import cors from "cors";
+const cors = require("cors");
+// import mongoose from "mongoose";
+const mongoose = require("mongoose");
+// import path from "path";
+
+const path = require("path");
+
 
 const app = express();
 app.use(express.json());
