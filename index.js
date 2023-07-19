@@ -21,7 +21,7 @@ app.get('/*', (req, res) => {
 // Connect to MongoDB using async/await syntax
 async function connectToDB() {
     try {
-        await mongoose.connect("mongodb://127.0.0.1:27017/myDB", {
+        await mongoose.connect("mongodb+srv://Nakul:recipeapp@cluster0.xx7nb6c.mongodb.net/loginsignup?retryWrites=true&w=majority", {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });
