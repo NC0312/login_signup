@@ -26,7 +26,7 @@ const Register=()=> {
         if(name && email && password &&(password === reEnterPassword))
         {
             // alert("posted");
-            axios.post("http://localhost:9002/register",user)
+            axios.post("/register",user)
             .then(res=>alert(res.data.message))
             navigate("/login");
         }else{

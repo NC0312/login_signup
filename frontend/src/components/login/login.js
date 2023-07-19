@@ -22,7 +22,7 @@ const Login = ({setLoginUser})=> {
     }
 
     const login=()=>{
-        axios.post("http://localhost:9002/login",user)
+        axios.post("/login",user)
         .then(res=>{
             alert(res.data.message)
             setLoginUser(res.data.user)
