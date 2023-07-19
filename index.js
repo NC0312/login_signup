@@ -1,10 +1,11 @@
+
 const express = require("express");
 // import cors from "cors";
 const cors = require("cors");
 // import mongoose from "mongoose";
 const mongoose = require("mongoose");
 // import path from "path";
-
+const port=process.env.PORT||9002;
 const path = require("path");
 
 const app = express();
@@ -16,6 +17,8 @@ app.use(express.static(path.join(__dirname, 'frontend', 'build')));
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
 })
+
+
 
 
 
@@ -90,6 +93,6 @@ app.post("/register", async (req, res) => {
 });
 
 
-app.listen(9002, () => {
+app.listen(port, () => {
     console.log("Backend Started at 9002");
 });
