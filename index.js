@@ -7,7 +7,6 @@ const mongoose = require("mongoose");
 
 const path = require("path");
 
-
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -17,6 +16,9 @@ app.use(express.static(path.join(__dirname, 'frontend', 'build')));
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
 })
+
+
+mongoose.set('strictQuery', true);
 
 // Connect to MongoDB using async/await syntax
 async function connectToDB() {
